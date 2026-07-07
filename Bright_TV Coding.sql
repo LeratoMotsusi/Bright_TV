@@ -25,3 +25,17 @@ FROM user_profiles;
 
 
 
+---Race Checks
+SELECT DISTINCT Race
+FROM user_profiles;
+
+SELECT DISTINCT
+    CASE 
+        WHEN Race = 'other' THEN 'unknown'
+        WHEN Race = 'None' THEN 'unknown'
+    ELSE Race
+    END AS Race_clean
+FROM user_profiles;
+
+
+
